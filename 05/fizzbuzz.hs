@@ -1,0 +1,10 @@
+fizzBuzz :: Int -> String
+fizzBuzz n 
+	| n `mod` 3 == 0 = "Fizz"
+	| n `mod` 5 == 0 = "Buzz"
+	| (n `mod` 3 == 0) && (n `mod` 5 == 0) = "FizzBuzz"
+	| otherwise = show n
+
+main :: IO()
+main = do
+    mapM_ print $ map fizzBuzz [1..100]
